@@ -1,0 +1,24 @@
+{
+    "storage": {
+        "active": "ghost-ipfs",
+        "ghost-ipfs": {
+            "defaultStorage": "filebase",
+            "filebase": {
+                "key": "FILEBASE_KEY",
+                "secret": "FILEBASE_SECRET",
+                "bucket": "FILEBASE_BUCKET",
+            },
+            "pinata": {
+                "jwt": "PINATA_JWT",
+            },
+            "fleek": {
+                "key": "FLEEK_KEY",
+                "secret": "FLEEK_SECRET",
+                "bucket": "FLEEK_BUCKET",
+            },
+            "web3": {
+                "token": "WEB3_TOKEN",
+            },
+        }
+    }
+}

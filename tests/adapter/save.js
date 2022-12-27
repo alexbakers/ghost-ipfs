@@ -1,7 +1,6 @@
 "use strict";
 
-const chai = require("chai"),
-  expect = chai.expect,
+const { expect } = require("chai"),
   { join } = require("path"),
   IPFSAdapter = require(join(__dirname, "../../"));
 
@@ -26,7 +25,8 @@ describe("save", function () {
           "https://bafkreibyct27usaxq7ciicbujhtqrf3mwyroomvqcpa6a2kktg54g4uj2u.ipfs.w3s.link"
         );
         done();
-      }).catch((err) => {
+      })
+      .catch((err) => {
         done(err);
       });
   });

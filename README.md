@@ -6,7 +6,7 @@
 
 ## Installation
 
-### Install using yarn/npm
+### Install using yarn/npm/git
 
 - Go into Ghost root directory
 - Download the adapter:
@@ -23,6 +23,11 @@ mkdir -p content/adapters/storage
 
 # move
 mv node_modules/ghost-ipfs content/adapters/storage/ghost-ipfs
+
+# or using git
+git clone \
+    https://github.com/alexbakers/ghost-ipfs \
+    content/adapters/storage/ghost-ipfs
 ```
 
 - Done, go configure

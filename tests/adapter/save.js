@@ -22,7 +22,7 @@ describe("save", function () {
       })
       .then((url) => {
         expect(url).to.equals(
-          "https://bafkreibyct27usaxq7ciicbujhtqrf3mwyroomvqcpa6a2kktg54g4uj2u.ipfs.w3s.link"
+          "https://bafkreidpx6pofofnlvw6szrp3mk3qunxvmnauuoaawhlquq2kn3vonc4i4.ipfs.w3s.link"
         );
         done();
       })
@@ -33,7 +33,7 @@ describe("save", function () {
 
   afterEach(function () {
     ipfsAdapter.delete(
-      "https://bafkreibyct27usaxq7ciicbujhtqrf3mwyroomvqcpa6a2kktg54g4uj2u.ipfs.w3s.link"
+      "https://bafkreidpx6pofofnlvw6szrp3mk3qunxvmnauuoaawhlquq2kn3vonc4i4.ipfs.w3s.link"
     );
   });
 });

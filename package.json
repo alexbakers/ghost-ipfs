@@ -1,6 +1,6 @@
 {
   "name": "ghost-ipfs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "IPFS storage adapter for Ghost",
   "main": "index.js",
   "keywords": [

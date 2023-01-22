@@ -4,7 +4,7 @@
  * IPFS storage adapter for Ghost.
  *
  * @author : Alex Baker <alex.baker.fon@gmail.com>
- * @updated : 24th Dec 2022
+ * @updated : 22th Jan 2022
  */
 
 require("dotenv").config();
@@ -35,6 +35,8 @@ class IPFSAdapter extends StorageBase {
         this.config.bucket = process.env.FLEEK_BUCKET;
       } else if (this.defaultStorage === "web3") {
         this.config.token = process.env.WEB3_TOKEN;
+      } else if (this.defaultStorage === "lighthouse") {
+        this.config.token = process.env.LIGHTHOUSE_TOKEN;
       }
     }
   }

@@ -2,7 +2,7 @@
 
 <img alt="ghost-ipfs" src="https://raw.githubusercontent.com/alexbakers/ghost-ipfs/main/public/banner.png" />
 
-[IPFS](https://ipfs.tech) (Filebase, Pinata, Fleek, Web3) storage adapter for [Ghost](https://github.com/TryGhost/Ghost).
+[IPFS](https://ipfs.tech) (Filebase, Pinata, Fleek, Web3, Lighthouse) storage adapter for [Ghost](https://github.com/TryGhost/Ghost).
 
 ## Installation
 
@@ -65,6 +65,9 @@ RUN set -ex; \
 
     # https://web3.storage/tokens/
     su-exec node ghost config storage.ghost-ipfs.web3.token "WEB3_TOKEN";
+
+    # https://files.lighthouse.storage/dashboard/apikey
+    su-exec node ghost config storage.ghost-ipfs.lighthouse.token "LIGHTHOUSE_TOKEN";
 ```
 
 Make sure to set the content path right in the Ghost config as well:
@@ -101,6 +104,9 @@ Make sure to set the content path right in the Ghost config as well:
       },
       "web3": {
         "token": "WEB3_TOKEN"
+      },
+      "lighthouse": {
+        "token": "LIGHTHOUSE_TOKEN"
       }
     }
   }
@@ -122,6 +128,8 @@ FLEEK_SECRET=""
 FLEEK_BUCKET=""
 
 WEB3_TOKEN=""
+
+LIGHTHOUSE_TOKEN=""
 ```
 
 `./config.production.json`
@@ -243,6 +251,30 @@ WEB3_TOKEN=""
 }
 ```
 
+## Configuration Ghost + Lighthouse
+
+<img alt="Configuration Ghost + Lighthouse" src="https://raw.githubusercontent.com/alexbakers/ghost-ipfs/main/public/lighthouse.png" />
+
+| Variable | Type   | Description                 | Required |
+| -------- | ------ | --------------------------- | -------- |
+| token    | string | Lghthouse Storage API Token | yes      |
+
+```json
+{
+  // ...
+  "storage": {
+    "active": "ghost-ipfs",
+    "ghost-ipfs": {
+      "defaultStorage": "lighthouse",
+      "lighthouse": {
+        "token": "LIGHTHOUSE_TOKEN"
+      }
+    }
+  }
+  // ...
+}
+```
+
 ## Links
 
 - [Ghost website](https://ghost.org/)
@@ -251,6 +283,7 @@ WEB3_TOKEN=""
 - [Pinata website](https://pinata.cloud/)
 - [Fleek website](https://fleek.co/)
 - [Web3 website](https://web3.storage/)
+- [Lighthouse website](https://lighthouse.storage/)
 
 ---
 

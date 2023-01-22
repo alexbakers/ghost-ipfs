@@ -1,6 +1,6 @@
 {
   "name": "ghost-ipfs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "IPFS storage adapter for Ghost",
   "main": "index.js",
   "keywords": [
@@ -16,7 +16,8 @@
     "web3",
     "filebase",
     "pinata",
-    "fleek"
+    "fleek",
+    "lighthouse"
   ],
   "repository": "https://github.com/alexbakers/ghost-ipfs",
   "bugs": {
@@ -29,7 +30,7 @@
   },
   "dependencies": {
     "ghost-storage-base": "^1.0.0",
-    "ipfs-storage": "^1.1.5",
+    "ipfs-storage": "^1.2.1",
     "dotenv": "^16.0.3"
   },
   "devDependencies": {

@@ -19,6 +19,9 @@
             "web3": {
                 "token": "WEB3_TOKEN",
             },
+            "lighthouse": {
+                "token": "LIGHTHOUSE_TOKEN",
+            }
         }
     }
 }
